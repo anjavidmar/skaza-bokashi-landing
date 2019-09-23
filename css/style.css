@@ -184,6 +184,27 @@ header .button {
 
 main section:first-child {
   position: relative;
+  /*
+  410px
+  .ribbon {
+      height: 120%;
+      top: 0;
+      @include transform(translate(25%, -5%));
+  }
+  490
+  height: 130%;
+  min-width: 140%;
+  690
+  min-width: 130%;
+  @include transform(translate(18%, -5%));
+  745
+  @include transform(translate(18%, -10%));
+  800
+  @include transform(translate(10%, -10%));
+  910
+  @include transform(translate(8%, -8%));
+
+  */
 }
 main section:first-child .ribbon {
   height: 50%;
@@ -298,12 +319,64 @@ main section:nth-child(4) {
 }
 main section:nth-child(4) p.uppercase {
   font-size: 1.25em;
-  padding: 0.75em 0;
+  line-height: 1;
+  padding: 0.85em 0;
 }
-main section:nth-child(5) .mobile {
+main section:nth-child(5) .text-container {
+  padding: 0 3% 2em;
+}
+main section:nth-child(5) .info-container {
+  padding-top: 15%;
+}
+main section:nth-child(5) .info-container > img {
+  background-color: #fff;
+  display: block;
+  -webkit-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+main section:nth-child(5) .info-container > .desktop {
+  display: none;
+}
+main section:nth-child(5) .pink-background {
+  background-color: #f2b6ac;
+  color: #fff;
+  overflow: hidden;
+  padding: 0.5rem;
+  position: relative;
+}
+main section:nth-child(5) .pink-background .quote {
+  position: absolute;
+  width: 5.25rem;
+}
+main section:nth-child(5) .pink-background .quote--start {
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(-7.75%, 0.5rem);
+  -ms-transform: translate(-7.75%, 0.5rem);
+  transform: translate(-7.75%, 0.5rem);
+}
+main section:nth-child(5) .pink-background .quote--end {
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translate(7.75%, -0.5rem);
+  -ms-transform: translate(7.75%, -0.5rem);
+  transform: translate(7.75%, -0.5rem);
+}
+main section:nth-child(5) .pink-background h4 {
+  font-size: 1.375rem;
+  padding: 3.0275rem 0.5rem 0.5rem 4.75rem;
+  position: relative;
+  text-align: left;
+}
+main section:nth-child(5) .pink-background p {
+  padding: 0.5em;
+  position: relative;
+}
+main section:nth-child(6) .mobile {
   display: block;
 }
-main section:nth-child(5) .desktop {
+main section:nth-child(6) .desktop {
   display: none;
 }
 
@@ -429,10 +502,10 @@ main section:nth-child(5) .desktop {
     margin: 0 auto;
     max-width: 520px;
   }
-  main section:nth-child(5) .mobile {
+  main section:nth-child(6) .mobile {
     display: none;
   }
-  main section:nth-child(5) .desktop {
+  main section:nth-child(6) .desktop {
     display: block;
   }
 }
@@ -631,3 +704,5 @@ main section:nth-child(5) .desktop {
     height: 170%;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
