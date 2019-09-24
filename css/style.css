@@ -326,11 +326,11 @@ main section:nth-child(5) .text-container {
   padding: 0 3% 2em;
 }
 main section:nth-child(5) .info-container {
-  padding-top: 15%;
+  padding-top: 10%;
 }
 main section:nth-child(5) .info-container > img {
-  background-color: #fff;
   display: block;
+  padding: 2rem;
   -webkit-transform: rotate(-15deg);
   -ms-transform: rotate(-15deg);
   transform: rotate(-15deg);
