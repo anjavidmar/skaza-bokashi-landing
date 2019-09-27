@@ -128,7 +128,7 @@ small, .small {
 }
 
 .text-container {
-  max-width: 1000px;
+  max-width: 1060px;
   margin: 0 auto;
   padding: 0 3%;
 }
@@ -211,7 +211,7 @@ header .right .image-container {
 }
 header .right .bokashi-set {
   display: block;
-  max-width: 280px;
+  max-width: 385px;
   width: 100%;
 }
 header .right .donna-logo {
@@ -238,31 +238,10 @@ header .button {
 
 main section:first-child {
   position: relative;
-  /*
-  410px
-  .ribbon {
-      height: 120%;
-      top: 0;
-      @include transform(translate(25%, -5%));
-  }
-  490
-  height: 130%;
-  min-width: 140%;
-  690
-  min-width: 130%;
-  @include transform(translate(18%, -5%));
-  745
-  @include transform(translate(18%, -10%));
-  800
-  @include transform(translate(10%, -10%));
-  910
-  @include transform(translate(8%, -8%));
-
-  */
 }
 main section:first-child .ribbon {
   height: 50%;
-  min-width: 130%;
+  min-width: 100%;
   max-width: 300%;
   position: absolute;
   right: 0;
@@ -293,7 +272,7 @@ main section:first-child .left img {
 }
 main section:first-child .right ul {
   margin: 0 auto;
-  max-width: 11em;
+  max-width: 18em;
   padding: 0.5em;
 }
 main section:first-child .right ul li {
@@ -447,9 +426,6 @@ main section:nth-child(6) .desktop {
   header .left > .tagline-container h1 {
     font-size: 80px;
   }
-  header .right .bokashi-set {
-    max-width: 320px;
-  }
 
   main section:first-child .ribbon {
     -webkit-transform: translate(20%, 10%);
@@ -459,30 +435,30 @@ main section:nth-child(6) .desktop {
 }
 @media screen and (min-width: 410px) {
   main section:first-child .ribbon {
-    height: 120%;
+    height: 105%;
     top: 0;
-    -webkit-transform: translate(25%, -5%);
-    -ms-transform: translate(25%, -5%);
-    transform: translate(25%, -5%);
+    -webkit-transform: translate(25%, 8%);
+    -ms-transform: translate(25%, 8%);
+    transform: translate(25%, 8%);
   }
   main section:first-child .text-container {
     font-size: 1.25em;
+  }
+  main section:first-child .opis h3 {
+    padding: 1.25em 0 1.5em;
   }
   main section:first-child .flex-container {
     -webkit-align-items: center;
     align-items: center;
     display: -webkit-flex;
     display: flex;
-    max-width: 670px;
   }
   main section:first-child .left {
-    width: 43%;
-  }
-  main section:first-child .left img {
-    max-width: 320px;
+    max-width: 330px;
+    width: 42%;
   }
   main section:first-child .right {
-    width: 57%;
+    width: 58%;
   }
   main section:nth-child(2) header div {
     display: inline-block;
@@ -531,10 +507,6 @@ main section:nth-child(6) .desktop {
     font-size: 95px;
   }
 
-  main section:first-child .ribbon {
-    height: 130%;
-    min-width: 140%;
-  }
   main section:first-child .opis h3 {
     font-size: 1.625em;
   }
@@ -611,9 +583,6 @@ main section:nth-child(6) .desktop {
     clear: both;
     padding: 1.5em 0 25% 10%;
   }
-  header .right .bokashi-set {
-    width: 90%;
-  }
   header .right .donna-logo {
     bottom: 1.25em;
   }
@@ -659,27 +628,44 @@ main section:nth-child(6) .desktop {
   header .left > .tagline-container h1 {
     font-size: 80px;
   }
-  header .right .bokashi-set {
-    max-width: 300px;
+
+  main section:first-child .ribbon {
+    height: 110%;
+    min-width: 130%;
+    -webkit-transform: translate(20%, 5%);
+    -ms-transform: translate(20%, 5%);
+    transform: translate(20%, 5%);
+  }
+  main section:first-child .left img {
+    max-width: 310px;
+  }
+  main section:first-child .right ul {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0.5em;
+  }
+  main section:first-child .right ul li {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    margin: 0.75em 0;
+  }
+  main section:first-child .right ul li img {
+    padding: 2px;
+    width: 42px;
+  }
+  main section:first-child .right ul li span {
+    font-size: 1.2em;
+    padding-left: 0.5em;
   }
 }
 @media screen and (min-width: 690px) {
-  main section:first-child .ribbon {
-    min-width: 130%;
-    -webkit-transform: translate(18%, -5%);
-    -ms-transform: translate(18%, -5%);
-    transform: translate(18%, -5%);
-  }
   main section:nth-child(4) p.uppercase {
     font-size: 2.4em;
   }
 }
 @media screen and (min-width: 745px) {
-  main section:first-child .ribbon {
-    -webkit-transform: translate(18%, -10%);
-    -ms-transform: translate(18%, -10%);
-    transform: translate(18%, -10%);
-  }
   main section:first-child .flex-container {
     padding: 1em 0 2.5em;
   }
@@ -718,12 +704,6 @@ main section:nth-child(6) .desktop {
   header .left > .tagline-container h1 {
     font-size: 95px;
   }
-
-  main section:first-child .ribbon {
-    -webkit-transform: translate(10%, -10%);
-    -ms-transform: translate(10%, -10%);
-    transform: translate(10%, -10%);
-  }
 }
 @media screen and (min-width: 910px) {
   header .text-container {
@@ -748,11 +728,6 @@ main section:nth-child(6) .desktop {
     opacity: 0;
   }
 
-  main section:first-child .ribbon {
-    -webkit-transform: translate(8%, -8%);
-    -ms-transform: translate(8%, -8%);
-    transform: translate(8%, -8%);
-  }
   main section:first-child .text-container {
     font-size: 1.5em;
   }
@@ -763,19 +738,13 @@ main section:nth-child(6) .desktop {
     font-size: 2.875em;
   }
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1125px) {
   main section:first-child .ribbon {
-    height: 160%;
+    height: 120%;
     min-width: 120%;
-    right: 0;
-    -webkit-transform: translate(8%, 0);
-    -ms-transform: translate(8%, 0);
-    transform: translate(8%, 0);
-  }
-}
-@media screen and (min-width: 1200px) {
-  main section:first-child .ribbon {
-    height: 170%;
+    -webkit-transform: translate(15%, 5%);
+    -ms-transform: translate(15%, 5%);
+    transform: translate(15%, 5%);
   }
 }
 
