@@ -356,6 +356,7 @@ main section:nth-child(4) p.uppercase {
   padding: 0.85em 0;
 }
 main section:nth-child(5) .text-container {
+  display: none;
   padding: 0 3% 2em;
 }
 main section:nth-child(5) .info-container {
@@ -408,6 +409,7 @@ main section:nth-child(5) .pink-background p {
 }
 main section:nth-child(6) .mobile {
   display: block;
+  width: 100%;
 }
 main section:nth-child(6) .desktop {
   display: none;
