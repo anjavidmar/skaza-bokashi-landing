@@ -535,6 +535,7 @@ main section:nth-child(6) .desktop {
   }
   main section:nth-child(6) .desktop {
     display: block;
+    width: 100%;
   }
 }
 @media screen and (min-width: 575px) {
