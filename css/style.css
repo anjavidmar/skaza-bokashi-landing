@@ -167,7 +167,7 @@ header .left > .quotemark-container {
 }
 header .left > .quotemark-container .quote {
   display: block;
-  max-width: 43%;
+  width: 43%;
 }
 header .left > .quotemark-container .logo {
   position: absolute;
@@ -215,12 +215,12 @@ header .right .bokashi-set {
   width: 100%;
 }
 header .right .donna-logo {
-  bottom: 0.5em;
+  display: block;
+  margin: 0 auto;
   max-width: 110px;
-  position: absolute;
-  right: 0;
-  width: 35%;
-  z-index: 3;
+  position: relative;
+  width: 45%;
+  z-index: 2;
 }
 header .right .quote {
   max-width: 43%;
@@ -355,64 +355,14 @@ main section:nth-child(4) p.uppercase {
   line-height: 1;
   padding: 0.85em 0;
 }
-main section:nth-child(5) .text-container {
-  display: none;
-  padding: 0 3% 2em;
-}
-main section:nth-child(5) .info-container {
-  padding-top: 10%;
-}
-main section:nth-child(5) .info-container > img {
-  display: block;
-  padding: 2rem;
-  -webkit-transform: rotate(-15deg);
-  -ms-transform: rotate(-15deg);
-  transform: rotate(-15deg);
-}
-main section:nth-child(5) .info-container > .desktop {
-  display: none;
-}
-main section:nth-child(5) .pink-background {
-  background-color: #f2b6ac;
-  color: #fff;
-  overflow: hidden;
-  padding: 0.5rem;
+main section:nth-child(5) {
+  background-color: #fefaf7;
+  background-image: url("../assets/images/woman-gardening.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
-}
-main section:nth-child(5) .pink-background .quote {
-  position: absolute;
-  width: 5.25rem;
-}
-main section:nth-child(5) .pink-background .quote--start {
-  left: 0;
-  top: 0;
-  -webkit-transform: translate(-7.75%, 0.5rem);
-  -ms-transform: translate(-7.75%, 0.5rem);
-  transform: translate(-7.75%, 0.5rem);
-}
-main section:nth-child(5) .pink-background .quote--end {
-  bottom: 0;
-  right: 0;
-  -webkit-transform: translate(7.75%, -0.5rem);
-  -ms-transform: translate(7.75%, -0.5rem);
-  transform: translate(7.75%, -0.5rem);
-}
-main section:nth-child(5) .pink-background h4 {
-  font-size: 1.375rem;
-  padding: 3.0275rem 0.5rem 0.5rem 4.75rem;
-  position: relative;
-  text-align: left;
-}
-main section:nth-child(5) .pink-background p {
-  padding: 0.5rem 4.75rem 0.5rem 0.5rem;
-  position: relative;
-}
-main section:nth-child(6) .mobile {
-  display: block;
   width: 100%;
-}
-main section:nth-child(6) .desktop {
-  display: none;
 }
 
 @media screen and (min-width: 350px) {
@@ -573,7 +523,6 @@ main section:nth-child(6) .desktop {
     font-size: 58px;
   }
   header .right {
-    text-align: left;
     width: 50%;
   }
   header .right .logo {
@@ -585,9 +534,6 @@ main section:nth-child(6) .desktop {
   header .right .image-container {
     clear: both;
     padding: 1.5em 0 25% 10%;
-  }
-  header .right .donna-logo {
-    bottom: 1.25em;
   }
 
   main section:first-child .text-container {
@@ -669,11 +615,19 @@ main section:nth-child(6) .desktop {
   }
 }
 @media screen and (min-width: 745px) {
-  main section:first-child .flex-container {
-    padding: 1em 0 2.5em;
-  }
   main section:nth-child(2) {
     font-size: 1em;
+  }
+  main section:nth-child(2) header div {
+    width: 100%;
+  }
+  main section:nth-child(2) header h5 {
+    text-align: center;
+  }
+  main section:nth-child(2) header img {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 100%;
   }
   main section:nth-child(2) .flex-container {
     -webkit-align-items: flex-end;
@@ -681,14 +635,11 @@ main section:nth-child(6) .desktop {
     display: -webkit-flex;
     display: flex;
   }
-  main section:nth-child(2) .flex-container .left {
-    width: 50%;
-  }
-  main section:nth-child(2) .flex-container .right {
-    width: 50%;
+  main section:nth-child(2) .flex-container .set {
+    width: 33%;
   }
   main section:nth-child(2) .paragraph-container {
-    min-height: 10.625em;
+    min-height: 17.8125em;
   }
   main section:nth-child(3) {
     padding: 1.5em 0 1em;
@@ -706,6 +657,10 @@ main section:nth-child(6) .desktop {
   }
   header .left > .tagline-container h1 {
     font-size: 95px;
+  }
+
+  main section:nth-child(2) .paragraph-container {
+    min-height: 15.375em;
   }
 }
 @media screen and (min-width: 910px) {
@@ -748,6 +703,29 @@ main section:nth-child(6) .desktop {
     -webkit-transform: translate(15%, 5%);
     -ms-transform: translate(15%, 5%);
     transform: translate(15%, 5%);
+  }
+  main section:nth-child(2) header div {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 60%;
+  }
+  main section:nth-child(2) header h5 {
+    font-size: 1.25em;
+    text-align: left;
+  }
+  main section:nth-child(2) header img {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 40%;
+  }
+  main section:nth-child(2) header img.bokashi1 {
+    display: none;
+  }
+  main section:nth-child(2) header img.bokashi2 {
+    display: inline-block;
+  }
+  main section:nth-child(2) .left, main section:nth-child(2) .right {
+    padding: 0 0.5em;
   }
 }
 
