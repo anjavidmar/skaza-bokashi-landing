@@ -86,7 +86,7 @@ h1, h2, .text--special {
   font-family: "Magnolia", cursive;
 }
 
-h3, h4, h6, .button, .text--important {
+h3, h6, .button, .text--important {
   font-family: "Unicod-M", sans-serif;
   text-align: center;
   text-transform: uppercase;
@@ -106,6 +106,8 @@ h3 {
 
 h4 {
   font-size: 1.25em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 h5 {
@@ -156,7 +158,7 @@ small, .small {
 header {
   padding: 1em 0 0;
 }
-header .text-container > .quote {
+header .text-container--inner > .quote {
   display: none;
 }
 header .left {
@@ -183,6 +185,7 @@ header .left > .tagline-container {
   padding: 1.15em 0 1em;
   position: relative;
   text-align: center;
+  width: 100%;
 }
 header .left > .tagline-container .large {
   left: 3%;
@@ -205,21 +208,20 @@ header .right .logo {
   display: none;
 }
 header .right .image-container {
-  display: inline-block;
-  padding: 0 0 15%;
-  position: relative;
+  padding: 1em 0 15%;
 }
 header .right .bokashi-set {
   display: block;
-  max-width: 385px;
+  margin: 0 auto;
+  max-width: 390px;
   width: 100%;
 }
 header .right .donna-logo {
   display: block;
   margin: 0 auto;
-  max-width: 110px;
+  max-width: 105px;
   position: relative;
-  width: 45%;
+  width: 40%;
   z-index: 2;
 }
 header .right .quote {
@@ -322,6 +324,9 @@ main section:nth-child(2) .paragraph-container p:first-child {
 main section:nth-child(2) .button-container .button {
   padding: 0.25rem 1em;
 }
+main section:nth-child(2) .set--1--desktop {
+  display: none;
+}
 main section:nth-child(3) {
   padding: 0 0 0.75em;
 }
@@ -350,12 +355,40 @@ main section:nth-child(4) {
   color: #fff;
   text-align: center;
 }
-main section:nth-child(4) p.uppercase {
-  font-size: 1.25em;
+main section:nth-child(4) h4 {
   line-height: 1;
   padding: 0.85em 0;
 }
 main section:nth-child(5) {
+  padding: 0.25em 0;
+  text-align: center;
+}
+main section:nth-child(5) .text-container {
+  max-width: 740px;
+}
+main section:nth-child(5) .text-container--inner {
+  margin: auto;
+  max-width: 370px;
+}
+main section:nth-child(5) h3 {
+  padding: 1em 0;
+}
+main section:nth-child(5) h3.desktop {
+  display: none;
+}
+main section:nth-child(5) .image-container {
+  padding: 0.5em;
+}
+main section:nth-child(5) #ebook {
+  box-shadow: 2px 2px 4px #000000cc;
+  display: block;
+  margin: 0 auto;
+}
+main section:nth-child(5) .button {
+  font-size: 1.5em;
+}
+
+footer {
   background-color: #fefaf7;
   background-image: url("../assets/images/woman-gardening.jpg");
   background-position: center;
@@ -367,7 +400,7 @@ main section:nth-child(5) {
 
 @media screen and (min-width: 350px) {
   header .left > .tagline-container {
-    max-width: 300px;
+    max-width: 320px;
   }
   header .left > .tagline-container .large {
     font-size: 78px;
@@ -426,37 +459,55 @@ main section:nth-child(5) {
     vertical-align: bottom;
     width: 40%;
   }
-  main section:nth-child(2) header img.bokashi1 {
-    display: none;
-  }
-  main section:nth-child(2) header img.bokashi2 {
-    display: inline-block;
-  }
-  main section:nth-child(2) .left, main section:nth-child(2) .right {
-    padding: 0 0.5em;
-  }
   main section:nth-child(3) {
     font-size: 1.1em;
   }
-  main section:nth-child(4) p.uppercase {
+  main section:nth-child(4) h4 {
     font-size: 1.4em;
   }
 }
 @media screen and (min-width: 490px) {
-  header {
-    font-size: 1.125em;
+  header .flex-container {
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
   }
-  header .left > .tagline-container {
-    max-width: 340px;
+  header .left {
+    max-width: 300px;
+    width: 100%;
   }
-  header .left > .tagline-container .large {
-    font-size: 92px;
+  header .left > .quotemark-container .quote {
+    width: 129px;
   }
-  header .left > .tagline-container h2:nth-child(2) {
-    font-size: 44px;
+  header .left > .quotemark-container .logo {
+    display: none;
   }
-  header .left > .tagline-container h1 {
-    font-size: 95px;
+  header .right {
+    max-width: 135px;
+    width: 100%;
+  }
+  header .right .logo {
+    float: right;
+    display: block;
+    max-width: 390px;
+    width: 180%;
+  }
+  header .right .image-container {
+    clear: both;
+    padding: 3em 0 15%;
+    width: 100%;
+  }
+  header .right .donna-logo {
+    max-width: 105px;
+    width: 100%;
+  }
+  header .right .quote {
+    max-width: 100%;
+    width: 129px;
+    bottom: -3.75em;
   }
 
   main section:first-child .opis h3 {
@@ -471,111 +522,80 @@ main section:nth-child(5) {
   main section:nth-child(3) {
     font-size: 1.1875em;
   }
-  main section:nth-child(4) p.uppercase {
+  main section:nth-child(4) h4 {
     font-size: 1.6875em;
   }
 }
-@media screen and (min-width: 520px) {
-  main section:nth-child(2) .left, main section:nth-child(2) .right {
-    margin: 0 auto;
-    max-width: 520px;
-  }
-  main section:nth-child(6) .mobile {
-    display: none;
-  }
-  main section:nth-child(6) .desktop {
-    display: block;
-    width: 100%;
-  }
-}
 @media screen and (min-width: 575px) {
-  header .text-container {
-    max-width: 770px;
+  header .text-container--inner {
+    position: relative;
   }
-  header .flex-container {
-    -webkit-align-items: stretch;
-    align-items: stretch;
-    display: -webkit-flex;
-    display: flex;
-  }
-  header .left {
-    width: 50%;
-  }
-  header .left > .quotemark-container .logo {
-    display: none;
-  }
-  header .left > .tagline-container {
-    position: absolute;
-    right: 45%;
-    top: 60%;
-    min-width: 230px;
-    -webkit-transform: translate(50%, -50%);
-    -ms-transform: translate(50%, -50%);
-    transform: translate(50%, -50%);
-  }
-  header .left > .tagline-container .large {
-    font-size: 58px;
-  }
-  header .left > .tagline-container h2:nth-child(2) {
-    font-size: 26px;
-  }
-  header .left > .tagline-container h1 {
-    font-size: 58px;
-  }
-  header .right {
-    width: 50%;
-  }
-  header .right .logo {
-    float: right;
+  header .text-container--inner > .quote {
     display: block;
-    max-width: 390px;
-    width: 80%;
+    position: absolute;
   }
-  header .right .image-container {
-    clear: both;
-    padding: 1.5em 0 25% 10%;
+  header .text-container--inner .quote--start {
+    left: 0;
+    top: 0;
+  }
+  header .text-container--inner .quote--end {
+    right: 0;
+    top: 90%;
+  }
+  header .left > .quotemark-container .quote {
+    opacity: 0;
+  }
+  header .right .quote {
+    opacity: 0;
   }
 
   main section:first-child .text-container {
     font-size: 1.25em;
   }
-  main section:nth-child(4) p.uppercase {
+  main section:nth-child(2) .text-container--inner--1, main section:nth-child(2) .text-container--inner--2 {
+    padding: 0 8%;
+  }
+  main section:nth-child(4) h4 {
     font-size: 2em;
   }
   main section:nth-child(5) .flex-container {
-    -webkit-align-items: stretch;
-    align-items: stretch;
+    -webkit-align-items: center;
+    align-items: center;
     display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
   }
-  main section:nth-child(5) .info-container > .mobile {
+  main section:nth-child(5) .text-container--inner {
+    width: 50%;
+  }
+  main section:nth-child(5) h3 {
+    padding: 1em 0;
+  }
+  main section:nth-child(5) h3.mobile {
     display: none;
   }
-  main section:nth-child(5) .info-container > .desktop {
+  main section:nth-child(5) h3.desktop {
     display: block;
   }
-  main section:nth-child(5) .left {
-    padding-right: 0.75rem;
-    width: 50%;
+  main section:nth-child(5) #ebook {
+    margin: 0 auto 0.5em;
   }
-  main section:nth-child(5) .right {
-    padding-left: 0.75rem;
-    width: 50%;
+  main section:nth-child(5) .button {
+    font-size: 1.5em;
   }
 }
 @media screen and (min-width: 640px) {
-  header .left > .tagline-container {
-    min-width: 320px;
-    max-width: 100%;
+  header .right {
+    max-width: 220px;
   }
-  header .left > .tagline-container .large {
-    font-size: 78px;
+  header .right .logo {
+    max-width: 390px;
+    width: 130%;
   }
-  header .left > .tagline-container h2:nth-child(2) {
-    font-size: 36px;
-  }
-  header .left > .tagline-container h1 {
-    font-size: 80px;
+  header .right .donna-logo {
+    max-width: 120px;
+    width: 100%;
   }
 
   main section:first-child .ribbon {
@@ -610,24 +630,17 @@ main section:nth-child(5) {
   }
 }
 @media screen and (min-width: 690px) {
-  main section:nth-child(4) p.uppercase {
+  main section:nth-child(4) h4 {
     font-size: 2.4em;
   }
 }
 @media screen and (min-width: 745px) {
-  main section:nth-child(2) {
-    font-size: 1em;
+  main section:nth-child(2) .text-container--inner--1 {
+    margin-bottom: 1em;
   }
-  main section:nth-child(2) header div {
-    width: 100%;
-  }
-  main section:nth-child(2) header h5 {
-    text-align: center;
-  }
-  main section:nth-child(2) header img {
-    display: inline-block;
-    vertical-align: bottom;
-    width: 100%;
+  main section:nth-child(2) .text-container--inner--2 {
+    clear: both;
+    padding: 0;
   }
   main section:nth-child(2) .flex-container {
     -webkit-align-items: flex-end;
@@ -635,19 +648,27 @@ main section:nth-child(5) {
     display: -webkit-flex;
     display: flex;
   }
-  main section:nth-child(2) .flex-container .set {
-    width: 33%;
+  main section:nth-child(2) .flex-container .left {
+    padding-right: 1em;
+    width: 50%;
   }
-  main section:nth-child(2) .paragraph-container {
-    min-height: 17.8125em;
+  main section:nth-child(2) .flex-container .right {
+    padding-left: 1em;
+    width: 50%;
+  }
+  main section:nth-child(2) .flex-container .paragraph-container {
+    min-height: 12.875em;
   }
   main section:nth-child(3) {
     padding: 1.5em 0 1em;
   }
 }
 @media screen and (min-width: 800px) {
+  header .left {
+    max-width: 350px;
+  }
   header .left > .tagline-container {
-    min-width: 340px;
+    max-width: 340px;
   }
   header .left > .tagline-container .large {
     font-size: 92px;
@@ -658,74 +679,54 @@ main section:nth-child(5) {
   header .left > .tagline-container h1 {
     font-size: 95px;
   }
-
-  main section:nth-child(2) .paragraph-container {
-    min-height: 15.375em;
-  }
 }
 @media screen and (min-width: 910px) {
-  header .text-container {
-    position: relative;
-  }
-  header .text-container > .quote {
-    display: block;
-    position: absolute;
-  }
-  header .text-container .quote--start {
-    right: 85%;
-    top: 0;
-  }
-  header .text-container .quote--end {
-    left: 85%;
-    top: 90%;
-  }
-  header .left > .quotemark-container .quote {
-    opacity: 0;
-  }
-  header .right .quote {
-    opacity: 0;
-  }
-
   main section:first-child .text-container {
     font-size: 1.5em;
   }
-  main section:nth-child(2) {
-    font-size: 1.125em;
-  }
-  main section:nth-child(4) p.uppercase {
+  main section:nth-child(4) h4 {
     font-size: 2.875em;
   }
 }
 @media screen and (min-width: 1125px) {
+  header .flex-container {
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  header .left {
+    max-width: 500px;
+  }
+  header .left > .tagline-container {
+    max-width: 480px;
+  }
+  header .left > .tagline-container .large {
+    font-size: 120px;
+  }
+  header .left > .tagline-container h2:nth-child(2) {
+    font-size: 58px;
+  }
+  header .left > .tagline-container h1 {
+    font-size: 125px;
+  }
+  header .right {
+    max-width: 350px;
+  }
+  header .right .logo {
+    max-width: 350px;
+  }
+  header .right .image-container {
+    padding: 6em 0 15%;
+  }
+  header .right .donna-logo {
+    max-width: 130px;
+  }
+
   main section:first-child .ribbon {
     height: 120%;
     min-width: 120%;
     -webkit-transform: translate(15%, 5%);
     -ms-transform: translate(15%, 5%);
     transform: translate(15%, 5%);
-  }
-  main section:nth-child(2) header div {
-    display: inline-block;
-    vertical-align: bottom;
-    width: 60%;
-  }
-  main section:nth-child(2) header h5 {
-    font-size: 1.25em;
-    text-align: left;
-  }
-  main section:nth-child(2) header img {
-    display: inline-block;
-    vertical-align: bottom;
-    width: 40%;
-  }
-  main section:nth-child(2) header img.bokashi1 {
-    display: none;
-  }
-  main section:nth-child(2) header img.bokashi2 {
-    display: inline-block;
-  }
-  main section:nth-child(2) .left, main section:nth-child(2) .right {
-    padding: 0 0.5em;
   }
 }
 
